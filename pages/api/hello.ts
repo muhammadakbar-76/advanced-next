@@ -9,5 +9,6 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: 'John Doe' })
+  res.setPreviewData({something: "anjay"}); //_next_preview_data same as jwt token, _prerendered_bypass just random string
+  res.status(200).json({ name: 'John Doe' });
 }
